@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-print("MAIN.PY LOADED")
 
 from .routes.socket import router
 

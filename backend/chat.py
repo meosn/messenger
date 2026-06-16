@@ -9,7 +9,7 @@ async def handle_chat(msg: SignalMessage) -> None:
     if not text:
         return
     timestamp = datetime.now(timezone.utc).isoformat()
-    payload["timestap"] = timestamp
+    payload["timestamp"] = timestamp
     msg.payload = payload
     if manager.get(msg.to_id):
         await manager.send_to_user(msg.to_id, msg.model_dump_json())
